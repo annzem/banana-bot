@@ -1,4 +1,4 @@
-package org.example;
+package com.github.annzem.banana.bot;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.camel.component.jms.JmsComponent;
@@ -8,12 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 
-/**
- * This is a standard spring-boot main class.
- */
 @SpringBootApplication
 public class TelegramBotApplication {
-
 
     @Value("${com.company.bananabot.broker-url}")
     private String brokerUrl;
@@ -23,7 +19,6 @@ public class TelegramBotApplication {
 
     @Value("${com.company.bananabot.password}")
     private String brokerPassword;
-
 
     public static void main(String[] args) {
         SpringApplication.run(TelegramBotApplication.class, args);
